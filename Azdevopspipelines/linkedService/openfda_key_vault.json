@@ -1,0 +1,10 @@
+{
+	"name": "openfda_key_vault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://openfdafiles.vault.azure.net/"
+		}
+	}
+}

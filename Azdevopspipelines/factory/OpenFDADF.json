@@ -1,0 +1,9 @@
+{
+	"name": "OpenFDADF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c3a22fee-736a-4c25-b8c1-456a8afa914d",
+		"tenantId": "f81ed2c1-53b9-4cd0-af10-d128e07c8913"
+	}
+}

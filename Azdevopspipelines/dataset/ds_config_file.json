@@ -1,0 +1,20 @@
+{
+	"name": "ds_config_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_openfdafiles",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "cleanedconfigincadd.json",
+				"folderPath": "configfiles",
+				"fileSystem": "openfda"
+			}
+		},
+		"schema": {}
+	}
+}

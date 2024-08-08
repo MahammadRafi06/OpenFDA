@@ -1,0 +1,17 @@
+{
+	"name": "ds_config_read_from_openfda",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_config_download",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		},
+		"schema": {}
+	}
+}

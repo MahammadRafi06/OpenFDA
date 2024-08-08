@@ -1,0 +1,10 @@
+{
+	"name": "ls_openfdafiles",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://openfdafiles.dfs.core.windows.net/"
+		}
+	}
+}

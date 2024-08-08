@@ -1,0 +1,38 @@
+{
+	"name": "ds_openfda_zip",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_openfda_datapull",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"sourceBaseURL": {
+					"value": "@dataset().sourceBaseURL",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"sourceBaseURL": {
+				"type": "string"
+			},
+			"sourceRelativeURL": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().sourceRelativeURL",
+					"type": "Expression"
+				}
+			},
+			"compression": {
+				"type": "ZipDeflate",
+				"level": "Optimal"
+			}
+		}
+	}
+}

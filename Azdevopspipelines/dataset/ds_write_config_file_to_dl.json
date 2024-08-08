@@ -1,0 +1,20 @@
+{
+	"name": "ds_write_config_file_to_dl",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_openfdafiles",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "rawconfignew",
+				"folderPath": "configfiles",
+				"fileSystem": "openfda"
+			}
+		},
+		"schema": {}
+	}
+}
