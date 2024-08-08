@@ -1,0 +1,11 @@
+{
+	"name": "ls_openfdafiles",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://openfdafiles.dfs.core.windows.net/"
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"name": "pl_data_pull",
+	"properties": {
+		"activities": [
+			{
+				"name": "pl_copy_openfda_azstorage",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "pl_pull_config_from_openfda",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_copy_openfda_azstorage_json_processing",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "pl_pull_config_from_openfda",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_pull_config_from_openfda",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-08-05T14:07:47Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

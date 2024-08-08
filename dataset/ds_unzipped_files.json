@@ -1,0 +1,34 @@
+{
+	"name": "ds_unzipped_files",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_openfdafiles",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sinkPath": {
+				"type": "string"
+			},
+			"sinkFileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().sinkFileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().sinkPath",
+					"type": "Expression"
+				},
+				"fileSystem": "openfda"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
